@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreignId('faculty_id')->constrained('faculties');
             $table->foreignId('department_id')->constrained('departments');
             $table->string('research_title', 100);
-            $table->string('file', 255);
+            $table->string('pdf_file', 255);
             $table->foreignId('old_position_id')->constrained('positions');
             $table->foreignId('new_position_id')->constrained('positions');
             $table->tinyInteger('agreement')->default(0);

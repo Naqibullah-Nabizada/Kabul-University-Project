@@ -22,7 +22,7 @@
                 </form>
             </div>
 
-            <div class="col-6 mt-5 mx-4">
+            <div class="col-6 mt-5"style="margin: 0 5rem">
                 <img src="{{ asset('assets/images/img (3).jpg') }}" class="img-thumbnail w-100">
             </div>
         </div>

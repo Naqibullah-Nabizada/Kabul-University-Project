@@ -1,7 +1,8 @@
 @font-face {
     font-family: IRANSans;
-    src: url('../fonts/IRANSans/IRANSansWeb_Light.woff'),
-        url('../fonts/IRANSans/IRANSansWeb_Light.woff') format('truetype');
+    src: url('../fonts/Sahil//Sahel-Bold.eot'),
+        url('../fonts/Sahil/Sahel-Bold.woff'),
+        url('../fonts/Sahil/Sahel-Bold.ttf') format('truetype');
     font-weight: normal;
 }
 
@@ -11,13 +12,24 @@
 }
 
 
-#researcher-form div.col-4{
+#researcher-form div.col-4 {
     width: calc(33.33% - 2rem) !important;
     margin: auto;
 }
 
 
-#researcher-form div.col-5{
+#researcher-form div.col-5 {
     width: calc(50% - 3rem) !important;
     margin: .3rem 1.5rem;
+}
+
+
+#sidebar {
+    position: relative;
+}
+
+#logout-form {
+    position: absolute;
+    right: -90px;
+    top: -160px;
 }

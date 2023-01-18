@@ -7,16 +7,16 @@
 @section('content')
     <section>
         <div class="col-12 mt-4">
-            <a href="{{ route('researcher.create') }}" class="btn btn-success mb-1 fw-bold col-2 mx-4">تحقیق کننده
+            <a href="{{ route('researcher.create') }}" class="btn btn-outline-success mb-1 fw-bold col-2 mx-4">تحقیق کننده
                 جدید<i class="fa fa-plus mx-2"></i></a>
-            <a href="{{ route('home') }}" class="btn btn-secondary mb-1 col-1">بازگشت</a>
+            <a href="{{ route('home') }}" class="btn btn-outline-secondary mb-1 col-1">بازگشت</a>
             <span class="h3 text-center mt-3 col-5" style="margin: 0 13rem">لیست تحقیق کننده گان</span>
 
             <form action="{{ route('search') }}" method="GET">
                 @csrf
                 <div class="form-group col-3 d-flex mx-4 my-2">
                     <input type="text" name="research_title" class="form-control" placeholder="جستجو">
-                    <button type="submit" class="btn btn-success mx-2"><i class="fa fa-search"></i></button>
+                    <button type="submit" class="btn btn-outline-dark mx-2"><i class="fa fa-search"></i></button>
                 </div>
                 <div class="mx-4">
                     @error('research_title')

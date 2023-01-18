@@ -17,7 +17,7 @@
                     id="researcher-form" enctype="multipart/form-data">
                     @csrf
                     <div class="col-4">
-                        <label class="form-label">نام: </label>
+                        <label class="form-label">نام</label>
                         <input type="text" name="firstname"
                             class="form-control mb-2 @error('firstname') is-invalid @enderror" placeholder="نام"
                             value="{{ old('firstname') }}">
@@ -27,7 +27,7 @@
                     </div>
 
                     <div class="col-4">
-                        <label class="form-label">تخلص: </label>
+                        <label class="form-label">تخلص</label>
                         <input type="text" name="lastname"
                             class="form-control mb-2 @error('lastname') is-invalid @enderror" placeholder="تخلص"
                             value="{{ old('lastname') }}">
