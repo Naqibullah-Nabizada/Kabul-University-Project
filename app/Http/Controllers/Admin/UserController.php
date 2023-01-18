@@ -34,7 +34,7 @@ class UserController extends Controller
 
     public function update(Request $request)
     {
-        DB::update('update users set email = ?, password = ?', [$request->email, $request->password]);
+        DB::update('update users set email = ?, password = ?', [$request->email, Hash::make($request->password)]);
         return redirect()->route('home')->with('swal-success', 'پروفایل شما با موفقیت ویرایش شد');
     }
 

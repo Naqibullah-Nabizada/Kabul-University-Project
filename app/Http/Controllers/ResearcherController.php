@@ -46,7 +46,7 @@ class ResearcherController extends Controller
      */
     public function store(StoreResearcherRequest $request)
     {
-        $file = $request->file('file');
+        $file = $request->file('pdf_file');
         $pdf = '';
         if (!empty($file)) {
             $pdf = time() . "-" . $request->firstname . "-" . $request->lastname . "." . $file->getClientOriginalExtension();
@@ -105,17 +105,17 @@ class ResearcherController extends Controller
     public function update(UpdateResearcherRequest $request, $id)
     {
         $researcher = Researcher::FindOrFail($id);
-        $file = $request->file('file');
+        $file = $request->file('pdf_file');
         $pdf = '';
 
         if (!empty($file)) {
-            if (file_exists('file/' . $researcher->file)) {
-                unlink('file/' . $researcher->file);
+            if (file_exists('file/' . $researcher->pdf_file)) {
+                unlink('file/' . $researcher->pdf_file);
             }
-            $pdf = $request->file . "." . $file->getClientOriginalExtension();
+            $pdf = time() . "-" . $request->firstname . "-" . $request->lastname . "." . $file->getClientOriginalExtension();
             $file->move('file', $pdf);
         } else {
-            $pdf = $researcher->file;
+            $pdf = $researcher->pdf_file;
         }
 
         $researcher->update([
