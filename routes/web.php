@@ -51,3 +51,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/get-departments/{faculty}', [ResearcherController::class, 'getDepartment'])->name('getDepartment');
     Route::get('/search', [ResearcherController::class, 'search'])->name('search');
 });
+
+
+// ! Not Found Route
+
+Route::fallback(function(){
+    return view('not-fount-page');
+});

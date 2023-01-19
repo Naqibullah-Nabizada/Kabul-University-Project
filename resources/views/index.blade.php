@@ -5,7 +5,7 @@
 
 @section('content')
     <section id="main-page">
-        <header>
+        <header id="main-page-header">
             <div>
                 <h5 class="col-12 mx-auto text-center mt-4">ریاست پوهنتون کابل</h5>
                 <h5 class="col-12 mx-auto text-center">معاونیت امور علمی</h5>
@@ -16,7 +16,7 @@
         <hr>
         <div class="d-flex justify-content-around">
 
-            <div class="col-2 d-flex flex-column my-auto" id="sidebar">
+            <div class="col-10 col-lg-2 d-lg-flex flex-lg-column my-auto" id="sidebar">
 
                 <form action="{{ route('logout') }}" method="POST" class="mx-4 mt-4" id="logout-form">
                     @csrf
@@ -26,12 +26,12 @@
                             class="fa fa-user px-2"></i>ویرایش پروفایل</a>
                 </form>
 
-                <a href="{{ route('researcher.index') }}" class="btn btn-outline-dark mb-3">لیست تحقیق کننده گان</a>
-                <a href="{{ route('faculty.index') }}" class="btn btn-outline-dark mb-3">لیست پوهنځی ها</a>
-                <a href="{{ route('position.index') }}" class="btn btn-outline-dark mb-3">لیست رتبه های علمی</a>
+                <a href="{{ route('researcher.index') }}" class="btn btn-outline-dark mb-3" id="main-page-links">لیست تحقیق کننده گان</a>
+                <a href="{{ route('faculty.index') }}" class="btn btn-outline-dark mb-3" id="main-page-links">لیست پوهنځی ها</a>
+                <a href="{{ route('position.index') }}" class="btn btn-outline-dark mb-3" id="main-page-links">لیست رتبه های علمی</a>
             </div>
 
-            <div class="col-7">
+            <div class="col-log-7 d-none d-lg-block">
                 <img src="{{ asset('assets/images/IMG_6342.JPG') }}" class="img-thumbnail"
                     style="width: 100%; height: 68vh; object-fit: cover">
             </div>

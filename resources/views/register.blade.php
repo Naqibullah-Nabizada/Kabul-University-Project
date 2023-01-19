@@ -6,10 +6,10 @@
 
 @section('content')
     <section>
-        <h2 class="col-12 mx-auto text-center p-3 mt-4">تحقیقات علمی پوهنتون کابل</h2>
+        <h2 class="col-12 mx-auto text-center p-md-3 mt-4" id="register-header">تحقیقات علمی پوهنتون کابل</h2>
 
         <div class="d-flex mx-auto">
-            <div class="col-4 mx-auto p-3 my-3">
+            <div class="col-10 col-md-4 mx-auto p-md-3 my-md-3">
                 <h3 class="text-center pt-5 pb-3">صفحه ثبت نام</h3>
                 <form action="{{ route('register.store') }}" method="POST" class="p-3 border rounded">
                     @csrf
@@ -38,7 +38,7 @@
                 </form>
             </div>
 
-            <div class="col-6">
+            <div class="col-md-6 d-none d-lg-block">
                 <img src="{{ asset('assets/images/login.svg') }}" class="img-fluid w-75">
             </div>
         </div>

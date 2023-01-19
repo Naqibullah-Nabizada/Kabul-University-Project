@@ -33,3 +33,39 @@
     right: -90px;
     top: -160px;
 }
+
+
+#not-found-page {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    background-image: url('../images/p404.png');
+    color: #fff;
+}
+
+#not-found-page #link{
+    background-color: chartreuse;
+}
+
+@media screen and (max-width: 576px) {
+
+    #main-page-header,
+    #logout-page-header div h5 {
+        font-size: 1rem;
+    }
+
+    #register-header {
+        font-size: 1rem;
+    }
+
+    #logout-form {
+        position: absolute;
+        right: -20px;
+        top: 180px;
+    }
+
+    #main-page-links {
+        display: block;
+    }
+
+}

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Auth\LoginRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,11 +21,17 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
+
+        request()->validate([
+            'email' => 'required|email',
+            'password' => 'required|min:6',
+        ]);
+
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             return redirect()->intended('home')->with('swal-success', 'خوش آمدید');
-        }else{
-            return redirect()->route("login")->with('swal-error', 'دوباره کوشش کنید.');
+        } else {
+            return redirect()->route('login')->with('swal-error', 'دوباره کوشش کنید.');
         }
     }
 
