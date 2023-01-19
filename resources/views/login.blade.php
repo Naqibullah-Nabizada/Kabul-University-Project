@@ -12,7 +12,7 @@
             </div> --}}
             <div>
                 <h5 class="col-12 mx-auto text-center mt-4">ریاست پوهنتون کابل</h5>
-                <h5 class="col-12 mx-auto text-center">معاونیت امور محصلان</h5>
+                <h5 class="col-12 mx-auto text-center">معاونیت امور علمی</h5>
                 <h5 class="col-12 mx-auto text-center">آمریت تحقیقات و مجله علمی</h5>
                 <h5 class="col-12 mx-auto text-center">سیستم ثبت تحقیقات کادر علمی</h5>
             </div>

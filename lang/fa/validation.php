@@ -231,5 +231,7 @@ return [
         'lastname' => 'تخلص',
         'research_title' => 'عنوان موضوع',
         'pdf_file' => 'فایل pdf',
+        'old_password' => 'رمز عبور قبیل',
+        'new_password' => 'رمز عبور جدید',
     ],
 ];

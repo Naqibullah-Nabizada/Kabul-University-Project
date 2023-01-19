@@ -15,6 +15,7 @@
                     @csrf
                     @method('PUT')
                     <div>
+                        <label class="form-label">ایمیل</label>
                         <input type="text" name="email" class="form-control mb-3" placeholder="ایمیل"
                             value="{{ old('email') }}">
                         @error('email')
@@ -23,13 +24,26 @@
                     </div>
 
                     <div>
-                        <input type="password" name="password" class="form-control mb-3" placeholder="رمز عبور">
-                        @error('password')
+                        <label class="form-label">رمز عبور قبلی</label>
+                        <input type="password" name="old_password" class="form-control mb-3" placeholder="رمز عبور قبلی">
+                        @error('old_password')
                             <p class="text-danger my-2">{{ $message }}</p>
                         @enderror
                     </div>
 
-                    <input type="submit" value="ویرایش پروفایل" class="btn btn-primary">
+                    <div>
+                        <label class="form-label">رمز عبور جدید</label>
+                        <input type="password" name="new_password" class="form-control mb-3" placeholder="رمز عبور جدید">
+                        @error('new_password')
+                            <p class="text-danger my-2">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div>
+                        <input type="submit" value="ویرایش پروفایل" class="btn btn-sm btn-warning">
+                        <a href="{{ route('home') }}" class="btn btn-sm btn-secondary">بازگشت</a>
+                    </div>
+
                 </form>
             </div>
 
@@ -39,4 +53,3 @@
         </div>
     </section>
 @endsection
-
