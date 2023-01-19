@@ -32,7 +32,7 @@
             </div>
 
             <div class="col-7">
-                <img src="{{ asset('assets/images/image.jpg') }}" class="img-thumbnail"
+                <img src="{{ asset('assets/images/IMG_6342.JPG') }}" class="img-thumbnail"
                     style="width: 100%; height: 68vh; object-fit: cover">
             </div>
         </div>
