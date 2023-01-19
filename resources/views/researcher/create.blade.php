@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="col-4">
-                        <label class="form-label">فایل مربوطه</label>
+                        <label class="form-label">فایل pdf</label>
                         <input type="file" name="pdf_file" class="form-control mb-2">
                         @error('pdf_file')
                             <p class="text-danger my-2">{{ $message }}</p>
