@@ -8,7 +8,7 @@
     <section class="col-12">
 
         <div class="col-6" style="margin: 0 11rem">
-            <div>
+            <div class="mb-2">
                 <h5 class="text-center pt-5 pb-3">لیست دیپارتمنت های پوهنتون کابل</h5>
                 <hr>
                 <table class="table table-striped">
@@ -41,6 +41,9 @@
                         @endforeach
                     </tbody>
                 </table>
+            </div>
+            <div>
+                {{ $departments->links() }}
             </div>
         </div>
 

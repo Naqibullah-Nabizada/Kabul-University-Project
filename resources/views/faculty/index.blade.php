@@ -8,7 +8,7 @@
     <section class="col-12">
 
         <div class="col-5" style="margin: 0 15rem">
-            <div>
+            <div class="mb-2">
                 <h5 class="text-center pt-5 pb-3">لیست پوهنځی های پوهنتون کابل</h5>
                 <hr>
                 <table class="table table-striped">
@@ -20,7 +20,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($facultis as $faculty)
+                        @foreach ($faculties as $faculty)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td class="fw-bold">{{ $faculty->name }}</td>
@@ -39,6 +39,9 @@
                         @endforeach
                     </tbody>
                 </table>
+            </div>
+            <div>
+                {{ $faculties->links() }}
             </div>
         </div>
 

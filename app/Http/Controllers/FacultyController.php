@@ -16,8 +16,8 @@ class FacultyController extends Controller
      */
     public function index()
     {
-        $facultis = Faculty::orderBy('name')->get();
-        return view('faculty.index', compact('facultis'));
+        $faculties = Faculty::orderBy('name')->paginate(8);
+        return view('faculty.index', compact('faculties'));
     }
 
     /**

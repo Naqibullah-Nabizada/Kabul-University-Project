@@ -84,13 +84,13 @@
                         </tbody>
                     </table>
                 @else
-                <div class="text-center mt-4">
-                    <h4 class="p-3">چیزی یافت نشد!</h4>
-                    <img src="{{ asset('assets/images/no-found.gif') }}" class="img-fluid" style="width: 35%">
-                </div>
+                    <div class="text-center mt-4">
+                        <h4 class="p-3">چیزی یافت نشد!</h4>
+                        <img src="{{ asset('assets/images/no-found.gif') }}" class="img-fluid" style="width: 35%">
+                    </div>
                 @endif
             </div>
-
+            {{ $researchers->links() }}
         </div>
     </section>
 @endsection

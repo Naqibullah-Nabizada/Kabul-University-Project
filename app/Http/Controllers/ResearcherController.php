@@ -21,7 +21,7 @@ class ResearcherController extends Controller
      */
     public function index()
     {
-        $researchers = Researcher::orderBy('firstname')->get();
+        $researchers = Researcher::orderBy('firstname')->paginate(8);
         return view('researcher.index', compact('researchers'));
     }
 
