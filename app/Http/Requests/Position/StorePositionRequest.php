@@ -24,7 +24,13 @@ class StorePositionRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'string', 'min:3']
+            'name' => ['required', 'string', 'min:3', 'unique:positions,name']
         ];
+    }
+
+
+    public function attributes()
+    {
+        return ['name' => 'نام رتبه علمی'];
     }
 }

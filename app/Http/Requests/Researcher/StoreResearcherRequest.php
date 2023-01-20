@@ -28,7 +28,7 @@ class StoreResearcherRequest extends FormRequest
             'lastname' => ['required', 'string', 'min:3'],
             'faculty_id' => ['required', 'exists:faculties,id'],
             'department_id' => ['required', 'exists:departments,id'],
-            'research_title' => ['required', 'string', 'min:3'],
+            'research_title' => ['required', 'string', 'min:3', 'unique:researchers,research_title'],
             'pdf_file' => ['required'],
             'old_position_id' => ['required', 'exists:positions,id'],
             'new_position_id' => ['required', 'exists:positions,id'],

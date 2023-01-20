@@ -7,9 +7,9 @@
 @section('content')
     <section>
 
-        <div class="d-flex mx-auto">
+        <div class="d-flex mx-auto my-5">
             <div class="col-3 mx-auto mb-3">
-                <h3 class="text-center pt-5 pb-3">ویرایش نمودن پوهنځی جدید</h3>
+                <h5 class="text-center pt-5 pb-3">ویرایش نمودن پوهنځی جدید</h5>
                 <hr>
                 <form action="{{ route('faculty.update', $faculty->id) }}" method="POST">
                     @csrf

@@ -47,6 +47,13 @@
     background-color: chartreuse;
 }
 
+#position-absolute{
+    position: absolute;
+    top: 7rem;
+    left: 15rem;
+    width: 15rem;
+}
+
 @media screen and (max-width: 576px) {
 
     #main-page-header,

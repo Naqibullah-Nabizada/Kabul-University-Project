@@ -16,7 +16,7 @@ class UserController extends Controller
 
     public function index()
     {
-        return view('login');
+        return view('auth.login');
     }
 
     public function login(Request $request)
@@ -24,12 +24,12 @@ class UserController extends Controller
 
         request()->validate([
             'email' => 'required|email',
-            'password' => 'required|min:6',
+            'password' => 'required|min:8',
         ]);
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('home')->with('swal-success', 'خوش آمدید');
+            return redirect()->route('home')->with('swal-success', 'خوش آمدید');
         } else {
             return redirect()->route('login')->with('swal-error', 'دوباره کوشش کنید.');
         }
@@ -37,7 +37,7 @@ class UserController extends Controller
 
     public function edit()
     {
-        return view('update-profile');
+        return view('auth.update-profile');
     }
 
 
@@ -45,8 +45,8 @@ class UserController extends Controller
     {
         request()->validate([
             'email' => 'required|email',
-            'old_password' => 'required|min:6',
-            'new_password' => 'required|min:6',
+            'old_password' => 'required|min:8',
+            'new_password' => 'required|min:8',
         ]);
 
         if (Hash::check($request->old_password, Auth::user()->password) && $request->email == Auth::user()->email) {
@@ -61,15 +61,15 @@ class UserController extends Controller
 
     public function registerCreate()
     {
-        return view('register');
+        return view('auth.register');
     }
 
     public function registerStore(Request $request)
     {
         request()->validate([
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
-            'password_confirmation' => 'required|min:6',
+            'password' => 'required|min:8',
+            'password_confirmation' => 'required|min:8',
         ]);
 
         if ($request->password === $request->password_confirmation) {

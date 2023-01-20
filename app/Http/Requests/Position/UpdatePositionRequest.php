@@ -27,4 +27,9 @@ class UpdatePositionRequest extends FormRequest
             'name' => ['required', 'string', 'min:3']
         ];
     }
+
+    public function attributes()
+    {
+        return ['name' => 'نام رتبه علمی'];
+    }
 }

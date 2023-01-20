@@ -11,7 +11,7 @@
 
             <div>
 
-                <h4 class="text-center p-3">ویرایش نمودن تحقیق کننده جدید</h4>
+                <h5 class="text-center p-3">ویرایش نمودن تحقیق کننده جدید</h5>
                 <hr>
                 <form action="{{ route('researcher.update', $researcher->id) }}" method="POST"
                     class="d-flex flex-wrap col-11 mx-auto" id="researcher-form" enctype="multipart/form-data">
@@ -100,7 +100,10 @@
                         <label class="form-label">پروتوکول</label>
                         <select name="protocol" class="form-control mb-2">
                             @for ($i = 1; $i < 501; $i++)
-                                <option value="{{ $i }}">{{ $i }}</option>
+                                <option value="{{ $i }}"
+                                    @if ($i == $researcher->protocol) selected @endif>
+                                    {{ $i }}
+                                </option>
                             @endfor
                         </select>
                     </div>

@@ -7,9 +7,9 @@
 @section('content')
     <section>
 
-        <div class="d-flex mx-auto">
+        <div class="d-flex mx-auto my-5">
             <div class="col-3 mx-auto mb-3">
-                <h3 class="text-center pt-5 pb-3">ویرایش نمودن دیپارتمنت</h3>
+                <h5 class="text-center pt-5 pb-3">ویرایش نمودن دیپارتمنت</h5>
                 <hr>
                 <form action="{{ route('department.update', $department->id) }}" method="POST">
                     @csrf

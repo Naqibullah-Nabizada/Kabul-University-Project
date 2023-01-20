@@ -11,7 +11,7 @@
 
             <div>
 
-                <h4 class="text-center p-3">اضافه نمودن تحقیق کننده جدید</h4>
+                <h5 class="text-center p-3">اضافه نمودن تحقیق کننده جدید</h5>
                 <hr>
                 <form action="{{ route('researcher.store') }}" method="POST" class="d-flex flex-wrap col-11 mx-auto"
                     id="researcher-form" enctype="multipart/form-data">

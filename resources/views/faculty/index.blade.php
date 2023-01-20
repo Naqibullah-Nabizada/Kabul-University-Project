@@ -5,11 +5,11 @@
 @endsection
 
 @section('content')
-    <section>
+    <section class="col-12">
 
-        <div class="d-flex">
-            <div class="col-5 mx-auto mb-3">
-                <h3 class="text-center pt-5 pb-3">لیست پوهنځی های پوهنتون کابل</h3>
+        <div class="col-5" style="margin: 0 15rem">
+            <div>
+                <h5 class="text-center pt-5 pb-3">لیست پوهنځی های پوهنتون کابل</h5>
                 <hr>
                 <table class="table table-striped">
                     <thead class="table-dark">
@@ -40,14 +40,16 @@
                     </tbody>
                 </table>
             </div>
+        </div>
 
-            <div class="col-2 my-auto mx-auto">
+        <div class="col-2 my-auto mx-auto">
+            <div class="col-12" id="position-absolute">
                 <a href="{{ route('faculty.create') }}" class="btn btn-success w-100 mb-1 fw-bold">پوهنځی
                     جدید<i class="fa fa-plus mx-2"></i></a>
-                <a href="{{ route('department.index') }}" class="btn btn-primary w-100 mb-1 fw-bold">لیست دیپارتمنت ها</a>
+                <a href="{{ route('department.index') }}" class="btn btn-primary w-100 mb-1 fw-bold">لیست دیپارتمنت
+                    ها</a>
                 <a href="{{ route('home') }}" class="btn btn-secondary w-100 mb-2">بازگشت</a>
             </div>
-
         </div>
     </section>
 @endsection

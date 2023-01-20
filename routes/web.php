@@ -37,10 +37,12 @@ require __DIR__ . '/auth.php';
 
 Route::get('/', [UserController::class, 'index'])->name('login');
 Route::post('/', [UserController::class, 'login'])->name('login.store');
-Route::get('/register', [UserController::class, 'registerCreate'])->name('register.create');
-Route::post('/register', [UserController::class, 'registerStore'])->name('register.store');
+// Route::get('/register', [UserController::class, 'registerCreate'])->name('register.create');
+// Route::post('/register', [UserController::class, 'registerStore'])->name('register.store');
 
 Route::middleware('auth')->group(function () {
+    // Route::get('/register', [UserController::class, 'registerCreate'])->name('register.create');
+    // Route::post('/register', [UserController::class, 'registerStore'])->name('register.store');
     Route::get('/update-profile', [UserController::class, 'edit'])->name('update.profile.edit');
     Route::put('/update-profile', [UserController::class, 'update'])->name('update.profile.store');
     Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -55,6 +57,6 @@ Route::middleware('auth')->group(function () {
 
 // ! Not Found Route
 
-Route::fallback(function(){
+Route::fallback(function () {
     return view('not-fount-page');
 });
