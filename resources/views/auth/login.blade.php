@@ -16,7 +16,7 @@
         </header>
         <hr>
         <div class="d-flex mx-auto">
-            <div class="col-10 col-md-4 mx-auto p-3 my-2 my-lg-5 border shadow-lg">
+            <div class="col-10 col-md-4 mx-auto p-3 my-2 my-lg-5 border rounded shadow-lg">
                 <h5 class="text-center pt-3 pb-3">صفحه ورود</h5>
                 <form action="{{ route('login.store') }}" method="POST" class="p-3 border rounded">
                     @csrf

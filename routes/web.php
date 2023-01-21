@@ -35,8 +35,10 @@ require __DIR__ . '/auth.php';
 
 // !Pages
 
-Route::get('/', [UserController::class, 'index'])->name('login');
-Route::post('/', [UserController::class, 'login'])->name('login.store');
+Route::middleware('guest')->group(function () {
+    Route::get('/', [UserController::class, 'index'])->name('login');
+    Route::post('/', [UserController::class, 'login'])->name('login.store');
+});
 // Route::get('/register', [UserController::class, 'registerCreate'])->name('register.create');
 // Route::post('/register', [UserController::class, 'registerStore'])->name('register.store');
 

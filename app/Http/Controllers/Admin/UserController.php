@@ -3,11 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\LoginRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
@@ -31,7 +29,7 @@ class UserController extends Controller
         if (Auth::attempt($credentials)) {
             return redirect()->route('home')->with('swal-success', 'خوش آمدید');
         } else {
-            return redirect()->route('login')->with('swal-error', 'دوباره کوشش کنید.');
+            return redirect()->back()->with('swal-error', 'ایمیل یا رمز عبور نادرست است.');
         }
     }
 
@@ -49,12 +47,10 @@ class UserController extends Controller
             'new_password' => 'required|min:8',
         ]);
 
-        if (Hash::check($request->old_password, Auth::user()->password) && $request->email == Auth::user()->email) {
+        if (Hash::check($request->old_password, Auth::user()->password)) {
             DB::update('update users set email = ?, password = ?', [$request->email, Hash::make($request->new_password)]);
             return redirect()->route('home')->with('swal-success', 'پروفایل شما با موفقیت ویرایش شد');
-        } else if ($request->email != Auth::user()->email) {
-            return redirect()->back()->with('swal-error', 'ایمیل نادرست میباشد.');
-        } else {
+        }else {
             return redirect()->back()->with('swal-error', 'رمز عبور قبلی نادرست میباشد.');
         }
     }
