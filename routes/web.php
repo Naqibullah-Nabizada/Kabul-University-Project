@@ -59,6 +59,6 @@ Route::middleware('auth')->group(function () {
 
 // ! Not Found Route
 
-Route::fallback(function () {
+Route::fallback(function(){
     return view('not-fount-page');
 });

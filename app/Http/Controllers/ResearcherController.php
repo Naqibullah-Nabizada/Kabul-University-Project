@@ -163,7 +163,7 @@ class ResearcherController extends Controller
     public function search(SearchRequest $request)
     {
         $search = $request->research_title;
-        $researchers = Researcher::where('research_title', $search)->get();
+        $researchers = Researcher::where('research_title', $search)->paginate(8);
         return view('researcher.index', compact('researchers'));
     }
 }
