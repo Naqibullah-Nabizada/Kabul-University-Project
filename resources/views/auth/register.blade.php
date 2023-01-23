@@ -22,7 +22,7 @@
                     @csrf
                     <div class="form-group">
                         <input type="text" name="email" class="form-control mb-3" placeholder="ایمیل"
-                            value="{{ old('email') }}">
+                            value="{{ old('email') }}" autofocus>
                         @error('email')
                             <p class="text-danger my-2">{{ $message }}</p>
                         @enderror
