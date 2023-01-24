@@ -8,7 +8,7 @@
     <section>
         <header id="logout-page-header">
             <div>
-                <h5 class="col-12 mx-auto text-center mt-4">ریاست پوهنتون کابل</h5>
+                <h5 class="col-12 mx-auto text-center mt-2 mt-md-4">ریاست پوهنتون کابل</h5>
                 <h5 class="col-12 mx-auto text-center">معاونیت امور علمی</h5>
                 <h5 class="col-12 mx-auto text-center">آمریت تحقیقات و مجله علمی</h5>
                 <h5 class="col-12 mx-auto text-center">سیستم ثبت تحقیقات کادر علمی</h5>
@@ -16,8 +16,9 @@
         </header>
         <hr>
         <div class="d-flex mx-auto">
-            <div class="col-10 col-md-4 mx-auto p-3 my-2 my-lg-5 border rounded shadow-lg">
-                <h5 class="text-center pt-3 pb-3">صفحه ورود</h5>
+            <div class="col-11 col-md-4 mx-auto p-3 my-2 my-lg-3 border rounded shadow-lg">
+                <h1 class="text-center"><i class="fa fa-user-check"></i></h1>
+                <h5 class="text-center pt-1 pb-3">صفحه ورود</h5>
                 <form action="{{ route('login.store') }}" method="POST" class="p-3 border rounded">
                     @csrf
                     <div>
