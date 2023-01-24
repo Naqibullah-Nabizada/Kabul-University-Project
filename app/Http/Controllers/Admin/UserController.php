@@ -22,7 +22,7 @@ class UserController extends Controller
 
         request()->validate([
             'email' => 'required|email',
-            'password' => 'required|min:8',
+            'password' => 'required|min:8|regex:/^[a-zA-Z0-9@$#^%&*!]+$/u',
         ]);
 
         $credentials = $request->only('email', 'password');
@@ -50,7 +50,7 @@ class UserController extends Controller
         if (Hash::check($request->old_password, Auth::user()->password)) {
             DB::update('update users set email = ?, password = ?', [$request->email, Hash::make($request->new_password)]);
             return redirect()->route('home')->with('swal-success', 'پروفایل شما با موفقیت ویرایش شد');
-        }else {
+        } else {
             return redirect()->back()->with('swal-error', 'رمز عبور قبلی نادرست میباشد.');
         }
     }
@@ -64,8 +64,8 @@ class UserController extends Controller
     {
         request()->validate([
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:8',
-            'password_confirmation' => 'required|min:8',
+            'password' => 'required|min:8|regex:/^[a-zA-Z0-9@$#^%&*!]+$/u',
+            'password_confirmation' => 'required|min:8|regex:/^[a-zA-Z0-9@$#^%&*!]+$/u',
         ]);
 
         if ($request->password === $request->password_confirmation) {
