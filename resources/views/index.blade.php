@@ -26,9 +26,12 @@
                             class="fa fa-user px-2"></i>ویرایش پروفایل</a>
                 </form>
 
-                <a href="{{ route('researcher.index') }}" class="btn btn-outline-dark mb-3" id="main-page-links">لیست تحقیق کننده گان</a>
-                <a href="{{ route('faculty.index') }}" class="btn btn-outline-dark mb-3" id="main-page-links">لیست پوهنځی ها</a>
-                <a href="{{ route('position.index') }}" class="btn btn-outline-dark mb-3" id="main-page-links">لیست رتبه های علمی</a>
+                <a href="{{ route('researcher.index') }}" class="btn btn-outline-dark mb-3" id="main-page-links">لیست تحقیق
+                    کننده گان <i class="fa fa-user-friends mx-1"></i></a>
+                <a href="{{ route('faculty.index') }}" class="btn btn-outline-dark mb-3" id="main-page-links">لیست پوهنځی ها
+                    <i class="fa fa-home mx-1"></i></a>
+                <a href="{{ route('position.index') }}" class="btn btn-outline-dark mb-3" id="main-page-links">لیست رتبه های
+                    علمی <i class="fa fa-graduation-cap mx-1"></i></a>
             </div>
 
             <div class="col-log-7 d-none d-lg-block">

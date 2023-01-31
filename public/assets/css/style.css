@@ -1,8 +1,8 @@
 @font-face {
     font-family: IRANSans;
-    src: url('../fonts/Sahil//Sahel-Bold.eot'),
-        url('../fonts/Sahil/Sahel-Bold.woff'),
-        url('../fonts/Sahil/Sahel-Bold.ttf') format('truetype');
+    src: url('../fonts/Sahil//Sahel.eot'),
+        url('../fonts/Sahil/Sahel.woff'),
+        url('../fonts/Sahil/Sahel.woff2') format('truetype');
     font-weight: normal;
 }
 

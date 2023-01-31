@@ -36,7 +36,7 @@
                         @enderror
                     </div>
 
-                    <input type="submit" value="ورود" class="btn btn-primary">
+                    <button type="submit" class="btn btn-sm btn-outline-primary">ورود <i class="fa fa-arrow-alt-circle-left mx-1"></i></button>
                 </form>
             </div>
             <div class="col-6 d-none d-md-block" style="margin: 0 5rem; width: 48%;">
